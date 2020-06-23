@@ -569,12 +569,8 @@ header {
 }
 .section-2,
 .section-4 {
-	// padding: 50px 20px;
-	// min-height: 650px;
-	// background: #000000;
 	position: relative;
 	overflow: hidden;
-	// @include flex;
 	.box_content {
 		@include left-right;
 		.box_left {
@@ -597,38 +593,14 @@ header {
 		}
 		.box_text {	
 			max-width: 80%;
-			h3 {
-				// color: #000;
-			}
 			p {
 				font-size: 16px;
 			}
 		}
 	}
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: linear-gradient(to bottom, #fff, transparent);
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: linear-gradient(to top, #fff, transparent);
-	}
 }
 .section-3,
 .section-5 {
-	// padding: 50px 20px;
-	// min-height: 650px;
-	// @include flex;
 	position: relative;
 	overflow: hidden;
 	.box_left {
@@ -652,24 +624,6 @@ header {
 				width: auto;
 			}
 		}
-	}
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: linear-gradient(to bottom, #fff, transparent);
-	}
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: linear-gradient(to top, #fff, transparent);
 	}
 	.box_content {
 		@include flex;
@@ -884,23 +838,32 @@ header {
 	}
 }
 .section_price {
-	height: 500px;
 	background: linear-gradient(215deg, #e446ff, #2a1058);
 	position: relative;
-	&::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 30px;
-		background: linear-gradient(180deg, transparent, #fff);
-	}
+	padding: 100px 10px;
 	.box_content {
 		@include left-right;
-		height: 500px;
 		.box_left {
-			color: #ffffff;
+			@include flex;
+			@include justify-content_center;
+			@include align-items;
+			.box_text {
+				max-width: 550px;
+				color: #ffffff;
+				ul {
+					list-style-type: none;
+					li {
+						background-image: url(../images/icon-3.png);
+						background-repeat: no-repeat;
+						background-position: left center;
+						background-size: 14px;
+						padding-left: 20px;
+						&:not(:last-of-type) {
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
 		}
 		.box_right {
 			@include flex;
@@ -912,7 +875,7 @@ header {
 .section_contacts {
 	max-width: 900px;
 	margin: auto;
-	padding: 50px 10px;
+	padding: 100px 10px;
 	h3 {
 		text-align: center;
 	}
@@ -977,11 +940,29 @@ header {
 					}
 				}
 				.box_submit {
-					@include btn_hover-2;
-					background: #00aeefb3;
+					position: relative;
 					&::before {
 						content: '';
-						background: #001f41;
+						background: #c5c5c5b3;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: initial;
+						width: 100%;
+						height: 100%;
+						transition: all .3s linear;
+						z-index: -1;
+					}
+					&::after {
+						content: '';
+						background: #000;
+						position: absolute;
+						bottom: 0;
+						left: initial;
+						right: 0;
+						width: 0%;
+						height: 100%;
+						transition: all .3s linear;
 						z-index: -1;
 					}
 					.input_submit {
@@ -989,10 +970,22 @@ header {
 						cursor: pointer;
 						transition: all .2s linear;
 					}
-					&:hover .input_submit {
-						color: #ffffff;
+					&:hover {
+						color: #000000;
+						&::before {
+							right: 0;
+							left: initial;
+							width: 0%;
+						}
+						&::after {
+							right: initial;
+							left: 0;
+							width: 100%;
+						}
+						.input_submit {
+							color: #ffffff;
+						}
 					}
-
 				}
 			}
 		}
@@ -1000,25 +993,25 @@ header {
 }
 footer {
 	padding: 30px 10px;
+	background: #000000;
 	.container {
 		p {
 		    max-width: 530px;
 		    margin: auto;
 		    text-align: center;
 		    font-size: 16px;
-		    color: #000;
+		    color: #fff;
 		}
 	}
 }
 #toTop {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    width: 39px;
+    height: 40px;
     border-radius: 15px;
-	background: #0351ff;
-	background: linear-gradient(to bottom, #0351ff, #000080);
+	background: #fff;
     cursor: pointer;
     opacity: 0.5;
     transition: all .25s linear;
@@ -1032,12 +1025,12 @@ footer {
 		&::before {
 			content: '';
 			position: absolute;
-			top: 18px;
-			left: 30px;
-			width: 25px;
-			height: 25px;
-			border-top: 5px solid #fff;
-			border-right: 5px solid #fff;
+			top: 13px;
+			left: 23px;
+			width: 17px;
+			height: 17px;
+			border-top: 5px solid #000;
+			border-right: 5px solid #000;
 			-webkit-transform: rotate(-45deg) translate(-50%, -50%);
 			-moz-transform: rotate(-45deg) translate(-50%, -50%);
 			-o-transform: rotate(-45deg) translate(-50%, -50%);
@@ -1222,17 +1215,24 @@ footer {
 	h3 {
 		font-size: 42px;
 	}
+	.section_service .box_content .box_left .box_text {
+		padding: 0 20px;
+	}
 	.section-2,
 	.section-4 { 
 		.box_content {
-			.box_left .box_img img {
-				height: 500px;
+			.box_left {
+				width: 63%;
+				.box_img img {
+					height: 500px;
+				}
 			}
 			.box_right {
 				@include justify-content_fx-st;
+				width: 37%;
 				.box_text {
 					max-width: 100%;
-					padding-right: 20px;
+					padding-right: 40px;
 				}
 			}
 		}
@@ -1240,7 +1240,7 @@ footer {
 	.section-3,
 	.section-5 {
 		.box_left {
-			padding-left: 20px;
+			padding-left: 40px;
 			@include justify-content_fx-st;
 			.box_text {
 				max-width: 100%;
@@ -1519,6 +1519,13 @@ footer {
 	.section_portfolio .box_content .box {
 		@include flex-basis(100%);
 	}
+	.section_price .box_content {
+		@include left-right-100;
+		height: auto;
+		.box_right {
+			margin-top: 50px;
+		}
+	}
 	.section_contacts .box_content {
 		@include left-right-100;
 		.box_right {
@@ -1571,6 +1578,9 @@ footer {
 		.title {
 			font-size: 24px;
 		}
+	}
+	.section_service .box_content .box_left .box_text {
+		padding: 0;
 	}
 	.section-2,
 	.section-4 {
