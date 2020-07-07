@@ -257,6 +257,7 @@ h3 {
 h4 {
 	font-size: 20px;
 	margin: 0;
+	color: #ffffff;
 }
 header {
 	position: fixed;
@@ -719,6 +720,7 @@ header {
 			padding: 20px;
 			height: 350px;
 			position: relative;
+			border: 1px solid #D0F00A;
 			&:hover {
 				.box_logo {
 					img,
@@ -748,6 +750,7 @@ header {
 				padding: 20px 0 10px;
 				p {
 					margin: 10px 0 0;
+					color: #ffffff;
 				}
 			}
 			.box_hide {
@@ -788,49 +791,49 @@ header {
 			}
 		}
 		.box_romax {
-			background: #0094d9;
+			background: #020A23;
 		}
 		.box_personal {
-			background: #bb87ff;
+			background: #020A23;
 			.box_logo img {
 				max-width: 320px;
 			}
 		}
 		.box_carlamp {
-			background: #b9205e;
+			background: #020A23;
 			.box_logo svg {
 				max-width: 320px;
 			}
 		}
 		.box_water {
-			background: #3dbf41;
+			background: #020A23;
 			.box_logo img {
 				max-width: 100px;
 			}
 		}
 		.box_amuaj {
-			background: #fff;
+			background: #020A23;
 			.box_logo img {
 				max-width: 150px;
 			}
 		}
 		.box_barcelona {
-			background: #4562AB;
+			background: #020A23;
 		}
 		.box_edison-group {
-			background: #fcff33;
+			background: #020A23;
 			.box_logo img {
 				max-width: 105px;
 			}
 		}
 		.box_heliport {
-			background: #ff5454;
+			background: #020A23;
 			.box_logo img {
 				max-width: 150px;
 			}
 		}
 		.box_podpotolkom {
-			background: #8ef1fb;
+			background: #020A23;
 			.box_logo img {
 				max-width: 150px;
 			}
