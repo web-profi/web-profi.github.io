@@ -654,29 +654,20 @@ header {
 			transform: translate(-50%, -50%);
 			width: 503px;
 			height: 291px;
-			// background: radial-gradient(59.45% 59.45% at 50% 50%, #072EFC 5.73%, rgba(5, 150, 254, 0) 78.12%);
 			.box_inner {
-				// background: radial-gradient(59.45% 59.45% at 50% 50%, #072EFC 5.73%, rgba(5, 150, 254, 0) 78.12%);
 				height: 100%;
 				@include flex;
 				@include justify-content_center;
 				@include align-items;
 				position: relative;
-				background: radial-gradient(59.45% 59.45% at 50% 50%, #072EFC 5.73%, rgba(5, 150, 254, 0) 78.12%);
-				// &::before {
-				// 	content: '';
-				// 	position: absolute;
-				// 	top: 50%;
-				// 	left: 50%;
-				// 	transform: translate(-50%, -50%);
-				// 	width: 350px;
-				// 	height: 200px;
-				// 	background: radial-gradient(59.45% 59.45% at 50% 50%, #072EFC 5.73%, rgba(5, 150, 254, 0) 78.12%);
-				// }
+				background-image: url(../images/sct-services_img-1.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
 				h2 {
 					text-shadow: 0px 4px 4px rgba(208, 240, 10, 0.15);
 					margin: 0;
-					margin-bottom: -13px;
+					// margin-bottom: -13px;
 				}
 			}
 		}
@@ -695,6 +686,7 @@ header {
 					font-size: 18px;
 					font-weight: bold;
 					color: #072efc;
+					text-align: center;
 				}
 			}
 			.box_mini-1 {
@@ -811,11 +803,14 @@ header {
 				background: #D0F00A;
 				color: #030117;
 				position: relative;
-				border: solid #D0F00A;
+				border: 1px solid #D0F00A;
 				border-width: 2px 2px 0;
-				border-radius: 5px 5px 0 0;
+				border-radius: 5px;
 				text-align: center;
 				min-width: 250px;
+				&:first-of-type {
+					margin-right: 10px;
+				}
 			}
 			.tabs__caption li:not(.active) {
 				cursor: pointer;
@@ -825,24 +820,14 @@ header {
 			// 	border-color: #D0F00A;
 			// }
 			.tabs__caption .active {
-				background: #030117;
-				color: #fff;
-				border-color: #D0F00A;
-			}
-			.tabs__caption .active:after {
-				content: '';
-				position: absolute;
-				bottom: -5px;
-				left: 0;
-				right: 0;
-				height: 5px;
-				background: #030117;
+				background: transparent;
+				color: #D0F00A;
+				border-color: #072efc;
+				border-bottom: 1px solid #072efc;
 			}
 			.tabs__content {
 				display: none;
-				// background: #FFF;
-				border: 1px solid #D0F00A;
-				border-radius: 0 5px 5px 5px;
+				border-radius: 5px;
 				padding: 7px 15px;
 			}
 			.tabs__content.active {
@@ -1151,8 +1136,8 @@ header {
     right: 15px;
     width: 39px;
     height: 40px;
-    border-radius: 15px;
-	background: #fff;
+    border-radius: 7px;
+	background: #020A23;
     cursor: pointer;
     opacity: 0.5;
     transition: all .25s linear;
@@ -1170,8 +1155,8 @@ header {
 			left: 23px;
 			width: 17px;
 			height: 17px;
-			border-top: 5px solid #000;
-			border-right: 5px solid #000;
+			border-top: 5px solid #fff;
+			border-right: 5px solid #fff;
 			-webkit-transform: rotate(-45deg) translate(-50%, -50%);
 			-moz-transform: rotate(-45deg) translate(-50%, -50%);
 			-o-transform: rotate(-45deg) translate(-50%, -50%);
@@ -1886,6 +1871,12 @@ header {
 			margin-left: 0;
 		}
 	}
+	.section_portfolio .box_content .tabs .tabs__caption {
+		padding-left: 0;
+		li {
+			min-width: 145px;
+		}
+	}
 	.section_contacts .box_content {
 		@include left-right-100;
 		.box_right {
@@ -1999,18 +1990,21 @@ header {
 		padding: 50px 40px;
 	}
 	.section_services {
-		padding: 30px 20px;
+		padding: 0px 20px 30px;
 		background-image: url(../images/services_bg.png);
 		background: rgba(2, 10, 35, 0.95);
 		.box_content {
 			max-width: 100%;
 			height: auto;
-			margin: 25px auto 0;
+			margin: 0px auto 0;
 			.box_title {
 				position: static;
 				width: auto;
-				height: auto;
+				height: 48.5vw;
 				transform: translate(0, 0);
+				.box_inner {
+					background-size: contain;
+				}
 				h2 {
 					font-size: 36px;
 					margin-bottom: 50px;
@@ -2060,6 +2054,9 @@ header {
 	.section-1 .box_content .box_advantage .box_text p, 
 	.section-1 .box_content .box_advantage.box_advantage-3 .box_text p {
 		font-size: 12px;
+	}
+	.section_stock .box_content h2, .section_portfolio .box_content h2 {
+		font-size: 24px;
 	}
 	.section_portfolio .box_content .box_portfolio .item {
 		@include flex-basis(100%);
@@ -2152,6 +2149,17 @@ header {
 	.section_services .box_content .box_services .box_mini {
 		width: 100%;
 	}
+	.section_portfolio {
+		padding: 30px 25px;
+		.box_content .tabs .tabs__caption li {
+			margin-right: 0;
+			width: 100%;
+			&:first-of-type {
+				margin-right: 0px;
+				margin-bottom: 15px;
+			}
+		}
+	}
 	.section_reviews {
 		padding: 30px 10px 70px;
 		.box_content .slider-2 .item {
@@ -2164,11 +2172,13 @@ header {
 	.section_contacts .box_content .box_right .box_contacts img {
 		height: 92vw;
 	}
-	.slick-prev {
-		left: 5px;
-	}
-	.slick-next {
-		right: 5px;
+	.slider-2 {
+		.slick-prev {
+			left: 5px;
+		}
+		.slick-next {
+			right: 5px;
+		}
 	}
 }
 

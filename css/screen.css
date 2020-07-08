@@ -128,7 +128,7 @@ h3 {
 h4 {
   font-size: 20px;
   margin: 0;
-  color: #ffffff;
+  color: #D0F00A;
 }
 
 /* line 262, ../sass/screen.scss */
@@ -788,7 +788,7 @@ header .menu-opened .burger span {
   padding: 20px;
   height: 350px;
   position: relative;
-  border: 1px solid #D0F00A;
+  border: 1px solid #032BFC;
 }
 /* line 726, ../sass/screen.scss */
 .section_portfolio .box_content .box:hover .box_logo img,
