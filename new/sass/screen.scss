@@ -579,7 +579,7 @@ header {
 	}
 }
 .section_bg {
-	background: linear-gradient(180deg, #030117 21.35%, rgba(2, 9, 33, 0.88) 100%);
+	background: linear-gradient(180deg, #030117 21.35%, rgba(2, 9, 33, 1) 100%);
 }
 .section_stock,
 .section_portfolio {
@@ -781,6 +781,7 @@ header {
 				list-style: none;
 				position: relative;
 				margin: -1px 0 0 -1px;
+				padding-left: 0;
 			}
 			.tabs__caption li:last-child:before {
 				content: '';
@@ -828,7 +829,7 @@ header {
 			.tabs__content {
 				display: none;
 				border-radius: 5px;
-				padding: 7px 15px;
+				padding: 7px 0px;
 			}
 			.tabs__content.active {
 				display: block;
@@ -871,6 +872,142 @@ header {
 						margin-top: 15px;
 					}
 				}
+			}
+		}
+	}
+}
+.box_portfolio-site {
+	margin-top: 83px;
+	.box_content {
+		@include flex;
+		@include flex-wrap;
+		.box {
+			@include flex;
+			@include flex-direction;
+			@include flex-basis(33.33%);
+			@include justify-content_fx-end;
+			padding: 20px;
+			height: 350px;
+			position: relative;
+			border: 1px solid rgba(3, 43, 252, 0.2);
+			&:hover {
+				.box_logo {
+					img,
+					svg {
+						-webkit-transform: rotateY(360deg);
+						-moz-transform: rotateY(360deg);
+						-o-transform: rotateY(360deg);
+						-ms-transform: rotateY(360deg);
+						transform: rotateY(360deg);
+					}
+				}
+			}
+			.box_logo {
+				margin-bottom: 50px;
+				img,
+				svg {
+					display: block;
+					width: 100%;
+					max-width: 250px;
+					margin: auto;
+					height: auto;
+					transition: all .6s linear;
+				}
+			}
+			.box_text {
+				text-align: center;
+				padding: 20px 0 10px;
+				p {
+					margin: 10px 0 0;
+					color: #ffffff;
+				}
+			}
+			.box_hide {
+				// display: none;
+				z-index: -1;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				overflow: auto;
+				opacity: 0;
+				transition: opacity 1s linear;
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.link {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				&::-webkit-scrollbar {
+					width: 5px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: #000000;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: #072EFC;
+				}
+			}
+			&:hover {
+				.box_hide {
+					z-index: 1;
+					opacity: 1;
+				}
+			}
+		}
+		.box_romax {
+			background: #020A23;
+		}
+		.box_personal {
+			background: #020A23;
+			.box_logo img {
+				max-width: 320px;
+			}
+		}
+		.box_carlamp {
+			background: #020A23;
+			.box_logo svg {
+				max-width: 320px;
+			}
+		}
+		.box_water {
+			background: #020A23;
+			.box_logo img {
+				max-width: 100px;
+			}
+		}
+		.box_amuaj {
+			background: #020A23;
+			.box_logo img {
+				max-width: 150px;
+			}
+		}
+		.box_barcelona {
+			background: #020A23;
+		}
+		.box_edison-group {
+			background: #020A23;
+			.box_logo img {
+				max-width: 105px;
+			}
+		}
+		.box_heliport {
+			background: #020A23;
+			.box_logo img {
+				max-width: 150px;
+			}
+		}
+		.box_podpotolkom {
+			background: #020A23;
+			.box_logo img {
+				max-width: 150px;
 			}
 		}
 	}
@@ -1199,12 +1336,12 @@ header {
 		max-width: 350px;
 		.modal-content {
 			border-radius: 0;
-			border: 1px solid #fff;
+			border: 1px solid #D0F00A;
 			position: relative;
 			padding: 1px 10px;
 			animation-name: animatetop;
 			animation-duration: 0.5s;
-			background: #1289E5;
+			background: #020921;
 			position: relative;
 			.modal-header {
 				border-bottom: 0;
@@ -1266,7 +1403,7 @@ header {
 						border: none;
 						border-bottom: 1px solid #000;
 						background: transparent;
-						border: 1px solid #fff;
+						border: 1px solid #D0F00A;
 						padding: 10px;
 						text-transform: uppercase;
 						opacity: .8;
@@ -1282,7 +1419,7 @@ header {
 					font-size: 20px;
 					text-transform: uppercase;
 					background: #ffd71e;
-					border: 1px solid #fff;
+					border: 1px solid #D0F00A;
 					vertical-align: middle;
 					padding: 8px 10px;
 					background: transparent;
@@ -1291,6 +1428,7 @@ header {
 					overflow: hidden;
 					z-index: 1;
 					position: relative;
+					font-weight: 400;
 					cursor: pointer;
 					&:focus {
 						outline: none;
@@ -1302,7 +1440,7 @@ header {
 						left: 0px;
 						width: 100%;
 						height: 100%;
-						background: #ffed9bfc;
+						background: #D0F00A;
 						z-index: -1;
 						-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
 						transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
@@ -1312,7 +1450,7 @@ header {
 						transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
 					}
 					&:hover {
-						color: #168eeb;	
+						color: #020921;	
 						&::before {
 							content: '';
 							opacity: 1;
@@ -1876,6 +2014,9 @@ header {
 		li {
 			min-width: 145px;
 		}
+	}
+	.section_portfolio .box_content .box {
+		@include flex-basis(100%);
 	}
 	.section_contacts .box_content {
 		@include left-right-100;

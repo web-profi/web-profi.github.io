@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 // Плавный переход по навигации
 
-	$(function() {
+$(function() {
 
 	$(window).scroll(function() {
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
 	});
 
-	});
+});
 
      $(document).ready(function(){
         $(".top-menu").on("click","a", function (event) {
@@ -72,14 +72,14 @@ $(document).ready(function () {
             $('body,html').animate({scrollTop: top}, 1000);
         });
     });
-    $(document).ready(function(){
-        $(".top-menu-2").on("click","a", function (event) {
-            event.preventDefault();
-            var id  = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top-0}, 1000);
-        });
-    });
+    // $(document).ready(function(){
+    //     $(".top-menu-2").on("click","a", function (event) {
+    //         event.preventDefault();
+    //         var id  = $(this).attr('href'),
+    //             top = $(id).offset().top;
+    //         $('body,html').animate({scrollTop: top-0}, 1000);
+    //     });
+    // });
 
 
 
