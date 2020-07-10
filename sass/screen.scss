@@ -1286,7 +1286,6 @@ header {
 		max-width: 350px;
 		.modal-content {
 			border-radius: 0;
-			// border: 1px solid #D0F00A;
 			position: relative;
 			padding: 1px 10px;
 			animation-name: animatetop;
@@ -1366,7 +1365,6 @@ header {
 					display: inline-block;
 					margin: 0px auto 0;
 					font-size: 18px;
-					border: 1px solid #D0F00A;
 					vertical-align: middle;
 					padding: 8px 10px;
 					background: #072efc;
@@ -1875,7 +1873,7 @@ header {
 			    position: fixed;
 			    top: 47px;
 			    left: 0;
-			    background-color: #000;
+			    background-color: #020a23;
 			    height: 100%;
 			    width: 100%;
 			    padding: 10px;
@@ -1984,6 +1982,9 @@ header {
 			.box_describe {
 				margin: 70px auto 0 0px;
 				max-width: 100%;
+				.text_describe {
+					margin: 20px 0 30px;
+				}
 				.my_btn {
 					max-width: 150px;
 					padding: 15px 10px;
