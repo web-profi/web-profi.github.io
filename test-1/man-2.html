@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" itemprop="image" content="images/favicon.png">
+	<title>Шапки вязанные</title>
+	<link rel="shortcut icon" href="images/woman-1_10.jpg" type="image/jpg">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" media="all" href="css/animate.css">
+    <link rel="stylesheet" media="all" href="css/unite-gallery.css">
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="all">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="box-phone">
+				<a href="tel:+38 (093) 663 44 12">(093) 663-44-12</a>
+				<a href="tel:+38 (067) 707 93 38">(067) 707-93-38</a>
+			</div> 
+			<div class="navigation">
+				<span class="burger"><span>☰</span></span>
+				<nav class="" id="">
+					<ul>
+						<li class="li-close-menu">
+							<span id="remove-menu-mobile" class="close-menu">x</span>
+						</li>
+						<li>
+							<a class="link-0" href="index.html">главная</a>
+						</li>								
+						<li>
+							<a class="link-1" href="woman-1.html">женская кол.-1</a>
+						</li>
+						<li>
+							<a class="link-2" href="woman-2.html">женская кол.-2</a>
+						</li>
+						<li>
+							<a class="link-3" href="man-1.html">мужская кол.-1</a>
+						</li>
+						<li>
+							<a class="link-4" href="man-2.html">мужская кол.-2</a>
+						</li>
+					</ul>
+				</nav>				
+			</div>
+		</div>
+	</header>
+	<section class="section-2">
+		<div class="container">
+			<div id="gallery">
+				<img src="images/man-2_12.jpg" alt="Подворот резинка">
+				<img src="images/man-2_13.jpg" alt="Подворот резинка">
+				<img src="images/man-2_1.jpg" alt="1,2,1-п">
+				<img src="images/man-2_2.jpg" alt="1,2">
+				<img src="images/man-2_3.jpg" alt="2,0">
+				<img src="images/man-2_4.jpg" alt="2,0">
+				<img src="images/man-2_5.jpg" alt="2,0">
+				<img src="images/man-2_6.jpg" alt="2,1">
+				<img src="images/man-2_7.jpg" alt="2,1">
+				<img src="images/man-2_8.jpg" alt="2,1-п">
+				<img src="images/man-2_9.jpg" alt="2,2-п">
+				<img src="images/man-2_10.jpg" alt="2,3">
+				<img src="images/man-2_11.jpg" alt="3,3">
+			</div>
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="js/unitegallery.min.js"></script>
+	<script src="js/ug-theme-tiles.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		var wow = new WOW(
+	  {
+	    boxClass:     'wow',
+	    animateClass: 'animated',
+	    mobile:       false
+	  }
+	);
+	wow.init();
+	</script>
+	<script type="text/javascript">
+				
+		jQuery(document).ready(function(){
+			
+			jQuery("#gallery").unitegallery({
+				gallery_theme: "tiles",
+ 				tiles_type: "justified",
+ 				tile_enable_textpanel: true,
+ 				tile_textpanel_always_on: true,
+ 				tiles_justified_space_between: 5,
+ 				tile_textpanel_bg_opacity: 0.0,	
+ 				tile_textpanel_title_color: "#000000",
+ 				tile_textpanel_title_bold: "400",
+ 				tile_textpanel_title_font_size: 13,
+ 				tile_textpanel_padding_right: 5,
+ 				tile_textpanel_padding_left: 5,
+			});
+		});
+				
+	</script>
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
