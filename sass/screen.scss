@@ -572,6 +572,8 @@ header {
 					position: relative;
 					.box_img {
 						box-shadow: 0px 4px 30px rgba(7, 46, 252, 0.5);
+						border-radius: 5px;
+						overflow: hidden;
 						img {
 							display: block;
 							width: 100%;
