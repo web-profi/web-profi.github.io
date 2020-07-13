@@ -172,6 +172,29 @@
 					<div class="item">
 						<div class="box">
 							<div class="box_img">
+								<!-- <img src="images/design/mini-img-11.jpg" alt=""> -->
+								<div class="slider-mini-1">
+									<div class="item">
+										<img src="images/design/slider-mini-img-1.jpg" alt="">
+									</div>
+									<div class="item">
+										<img src="images/design/slider-mini-img-2.jpg" alt="">
+									</div>
+									<div class="item">
+										<img src="images/design/slider-mini-img-3.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="box_text">
+								<h3>Landing Page <br>Салон красоты</h3>
+								<p class="price">3500 грн</p>
+							</div>
+							<a class="show_template" data-fancybox="gallery" href="images/design/16.jpg"></a>
+						</div>
+					</div>
+					<div class="item">
+						<div class="box">
+							<div class="box_img">
 								<img src="images/design/mini-img-10.jpg" alt="">
 							</div>
 							<div class="box_text">
@@ -203,18 +226,6 @@
 								<p class="price">3500 грн</p>
 							</div>
 							<a class="show_template" data-fancybox="gallery" href="images/design/lg.jpg"></a>
-						</div>
-					</div>
-					<div class="item">
-						<div class="box">
-							<div class="box_img">
-								<img src="images/design/mini-img-11.jpg" alt="">
-							</div>
-							<div class="box_text">
-								<h3>Landing Page <br>Салон красоты</h3>
-								<p class="price">3500 грн</p>
-							</div>
-							<a class="show_template" data-fancybox="gallery" href="images/design/16.jpg"></a>
 						</div>
 					</div>
 				</div>
@@ -472,6 +483,18 @@
 									<a class="show_template" data-fancybox="gallery" href="images/design/servis.jpg"></a>
 								</div>
 							</div>
+							<div class="item">
+								<div class="box">
+									<div class="box_img">
+										<img src="images/design/mini-img-11.jpg" alt="">
+									</div>
+									<div class="box_text">
+										<h3>Landing Page <br>Салон красоты</h3>
+										<p class="price">3500 грн</p>
+									</div>
+									<a class="show_template" data-fancybox="gallery" href="images/design/16.jpg"></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -679,6 +702,16 @@
 				}
 				}
 			]
+		});
+	});
+
+	$(document).ready(function(){
+		$('.slider-mini-1').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			fade: true,
 		});
 	});
 
